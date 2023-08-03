@@ -36,7 +36,7 @@ public class KafkaCommunicationController {
     }
 
     @PostMapping(value = KAFKA_PUBLISH_ENDPOINT)
-    public ResponseEntity<KafkaCommunicationDto> findFilesByExtension(
+    public ResponseEntity<KafkaCommunicationDto> publishToKafka(
             @RequestBody KafkaCommunicationDto kafkaCommunicationDto) {
         log.info("Incoming request to publish \"{}\" to \"{}\"", kafkaCommunicationDto.getMessage(),
                 kafkaCommunicationDto.getTopic());

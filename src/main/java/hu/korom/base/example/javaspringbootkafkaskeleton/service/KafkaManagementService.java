@@ -26,7 +26,7 @@ public class KafkaManagementService {
         kafkaTemplate.send(topicName, msg);
     }
 
-    @KafkaListener(topics = "topicName")
+    @KafkaListener(topics = "testTopic")
     public void listenWithHeaders(
             @Payload String message,
             @Header(KafkaHeaders.RECEIVED_PARTITION) int partition) {

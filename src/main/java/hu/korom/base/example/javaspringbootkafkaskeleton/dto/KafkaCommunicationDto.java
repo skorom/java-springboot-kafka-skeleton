@@ -4,6 +4,7 @@ public class KafkaCommunicationDto {
     private String topic;
     private String message;
 
+    public KafkaCommunicationDto() {}
     public KafkaCommunicationDto(String topic, String message) {
         this.topic = topic;
         this.message = message;
